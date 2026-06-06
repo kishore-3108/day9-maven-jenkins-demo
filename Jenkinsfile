@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
-        DOCKER_IMAGE = "kishore3129/day9-app"
-        DOCKER_TAG = "v1.0.${BUILD_NUMBER}"
+        IMAGE_NAME = "kishore3129/day9-app"
+        IMAGE_TAG = "v1.0.${BUILD_NUMBER}"
     }
     stages {
         stage('Docker Build') {
